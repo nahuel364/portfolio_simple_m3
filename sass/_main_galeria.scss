@@ -1,0 +1,113 @@
+main{
+    .porfolio{
+        background-image: linear-gradient(to top, #064663, #006173, #007b72, #4a9365, #8da558, #ae974c, #c68754, #d2786a, #a7586e, #704368, #383052, #041c32);
+        .hero{
+            width: 100%;
+            height: 20vh;
+            background-image: url(../assets/img/f_separador2.svg);
+            background-size: cover;
+            background-color: #004d7a;
+            h2{
+                width: 100%;
+                height: 20vh;
+                // background-color: rgba(0, 0, 0, 0.5);
+                // estilos
+                font-family: $tipografia-titulos;
+                font-weight: bold;
+                font-size: 4rem;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                color: aliceblue;
+            }
+        }
+        
+        h4{
+            width: 100%;
+            color: #f0f0f3;
+            margin-top: 7rem;
+            text-transform: uppercase;
+            font-size: 2rem;
+            padding: 1rem;
+            letter-spacing: 5px;
+            hr{
+                width: 80%;
+                opacity: 1;
+            }
+        }
+        .foti{
+            display: none;
+        }
+    }
+}
+// responsive
+@include sm(){
+    main{
+        .porfolio{
+            .hero{
+                h2{
+                    font-size: 4rem;
+                }
+            }
+            .galeria{
+                a{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@include lg (){
+    main{
+        .porfolio{
+            h3{
+                height: 30vh;
+            }
+            .galeria{
+                height: 50rem;
+                padding: 1rem;
+                .retratos{
+                    padding: 1rem;
+                    a{
+                        img{
+                            border-radius: 1rem;
+                            transition: all 200ms;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                        }
+                        
+                    }
+                }
+                .paisajes{
+                    padding: 1rem;
+                    a{
+                        img{
+                            border-radius: 1rem;
+                            transition: all 200ms;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                        }
+                        
+                    }
+                }
+                .ilustracion{
+                    padding: 1rem;
+                    a{
+                        img{
+                            border-radius: 1rem;
+                            transition: all 200ms;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+}

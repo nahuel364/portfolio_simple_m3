@@ -1,0 +1,138 @@
+main{
+    #contacto{
+        background-image: linear-gradient(to top, #001122, #362753, #8a2c67, #d53b52, #f7770f);
+        .hero{
+            width: 100%;
+            height: 20vh;
+            background-image: url(../assets/img/f_separador2.svg);
+            background-size: cover;
+            background-color: #004d7a;
+            h2{
+                width: 100%;
+                height: 20vh;
+                // background-color: rgba(0, 0, 0, 0.5);
+                // estilos
+                font-family: $tipografia-titulos;
+                font-weight: bold;
+                font-size: 4rem;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                color: aliceblue;
+            }
+        }
+        .text_contacto{
+            width: 80%;
+            border: solid 1px aliceblue;
+            padding: 1rem;
+            margin-top: 5rem;
+            border-radius: 1rem;
+            p{
+                color: map-get($map:$colores-pagina , $key:titulos);
+                font-family: $tipografia-titulos;
+                font-size: 2rem;
+                letter-spacing: 3px;
+                text-align: center;
+            }
+        }
+        .link_contacto{
+            margin: 2rem;
+            a{
+                text-decoration: none;
+                color: aliceblue;
+                margin: 1rem;
+            }
+            .bton_mail{
+                width: 20rem;
+                border-radius: 5rem;
+                font-size: 3rem;
+                padding: 0.5rem;
+                background-color: rgba(0, 17, 34, 0.5);
+                i{
+                    margin-right: 4rem;  
+                    background-color:map-get($map: $colores-pagina, $key:titulos);
+                    padding: 1rem;
+                    border-radius: 5rem;
+                    box-shadow: inset 1px 1px 10px #657e7e;
+                }
+                span{
+                    font-size: 2rem;
+                    margin-right:1rem;
+                    font-family: $tipografia-general;
+                }
+            }
+            .bton_wassap{
+                width: 20rem;
+                border-radius: 5rem;
+                padding: 0.5rem;
+                background-color: rgba(0, 17, 34, 0.5);
+                i{
+                    margin-right: 4rem;
+                    background-color:map-get($map: $colores-pagina, $key:titulos);
+                    padding: 1rem;
+                    border-radius: 5rem;
+                    font-size: 3.2rem;
+                    box-shadow: inset 1px 1px 10px #657e7e;
+                }
+                span{
+                    font-size: 2rem;
+                    margin-right:1rem;
+                    font-family: $tipografia-general;
+                }
+            }
+        }
+        .mapa{
+            border: solid 2px black;
+            border-radius: 1rem;
+            margin: 3rem;
+            iframe{
+                width: 100%;
+                height: 30rem;
+                border-radius: 1rem;
+                box-shadow: 5px 5px 5px black;
+            }
+        }
+    }
+}
+// responsive
+@include sm(){
+    main{
+        #contacto{
+            .hero{
+                h2{
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}
+@include lg (){
+    main{
+        #contacto {
+            padding-bottom: 5rem;
+            .text_contacto{
+                width: 50%;
+                border: solid 1px aliceblue;
+                box-shadow: none;
+              }
+              .cont_link_map{
+                .link_contacto{
+                    a{
+                        .bton_mail{
+                            transition: $transition;
+                            &:hover{
+                              box-shadow: inset 1px 1px 15px #e5992e;
+                            }
+                        }
+                        .bton_wassap{
+                            transition: $transition;
+                            &:hover{
+                              box-shadow: inset 1px 1px 15px #e5992e;
+                            }
+                        }
+                    }
+                }
+              } 
+        }
+      
+    }
+}

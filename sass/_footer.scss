@@ -1,0 +1,80 @@
+footer{
+    margin:0 auto ;
+    bottom: 0;
+    background-color: rgb(24, 21, 21);
+    .botonera{
+        .redes{
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            i{
+                color: white;
+                font-size: 3rem;
+                padding: 1rem;
+            }
+        }
+    }
+    .footer_2{
+        margin-bottom: 3rem;
+        background-color:aliceblue;
+        span{
+            font-size: 1.5rem;
+            color: black;
+        }
+    }
+}
+
+// resposive
+@include sm(){
+    footer{
+        .redes{
+            justify-content: center;
+            a{
+                margin-right: 2rem;
+                i{
+                    font-size:2.5rem;
+                    margin: 1rem;
+                }
+            }
+          
+        }
+    }
+    .footer_2{
+        span{
+            font-size: 1.5rem;
+        }
+    }
+}
+@include lg (){
+    footer{
+        .botonera{
+            a{
+                .bton_sobre_mi{
+                    border: none;
+                    &:hover{
+                        text-shadow: 1px 1px 5px #ECB365;
+                    }
+                    
+                }
+                .bton_porfolio{
+                    border: none;
+                    &:hover{
+                        text-shadow: 1px 1px 5px #ECB365;
+                    }
+                }
+            }
+        }
+        .redes{
+            justify-content: center;
+            a{
+                margin-right: 3rem;
+                i{
+                    padding: 0.1rem;
+                }
+                &:hover{
+                    filter: drop-shadow(1px 1px 5px #ECB365);
+                }
+            }
+        }
+    }
+}
